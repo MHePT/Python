@@ -4,7 +4,7 @@ def draw_line(x1, y1, x2, y2):
     m = dy/dx
     fx = x1 
     fy = y1
-    mylist = [[0 for i in range(max(y1,y2)+1)] for j in range(max(x1,x2)+1)]
+    mylist = [["" for i in range(max(y1,y2)+1)] for j in range(max(x1,x2)+1)]
     mark = 1
     
     mylist[round(fx)][round(fy)] = mark
@@ -25,7 +25,7 @@ def draw_line(x1, y1, x2, y2):
             fy += 1
             mylist[round(fx)][round(fy)] = mark
     
-
+    mylist = mylist[::-1]
     for row in mylist:
         print(row)
 

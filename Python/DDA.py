@@ -9,15 +9,15 @@ def draw_line(x1, y1, x2, y2):
     
     mylist[round(fx)][round(fy)] = mark
 
-    if m > 1:
+    if m < 1:
         while fx != x2:
             fx += 1
             fy += m
             mylist[round(fx)][round(fy)] = mark
-    elif m < 1:
+    elif m > 1:
         while fy != y2:
             fy += 1
-            fx += m
+            fx += 1/m
             mylist[round(fx)][round(fy)] = mark
     else:
         while fy != y2 and fx != x2:
@@ -30,4 +30,4 @@ def draw_line(x1, y1, x2, y2):
         print(row)
 
 # Example usage
-draw_line(10, 20, 20, 30)
+draw_line(10, 20, 25, 30)

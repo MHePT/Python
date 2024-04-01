@@ -13,6 +13,7 @@
     <RootNamespace>Python</RootNamespace>
     <InterpreterId>
     </InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,6 +28,7 @@
     <Compile Include="DDA.py" />
     <Compile Include="Main.py" />
     <Compile Include="Mid-Point Circle Algorithm.py" />
+    <Compile Include="Normalized Discounted Cumulative Gain.py" />
     <Compile Include="test.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

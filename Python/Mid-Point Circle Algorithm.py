@@ -2,19 +2,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def FirstOctan(r):
-    ret = [(0,r)]
+    ret = []
     x = 0
     y = r
     p = 1 - r
     
-    while x < y:
+    while x <= y:
         ret.append((x,y))
         x += 1
         if p < 0:
-            p = p + 2 * (x + 1) + 1
+            p = p + 2 * x + 1
         else:
             y -= 1
-            p = p + 2 * (x + 1) - 2 * (y - 1) + 1
+            p = p + 2 * x - 2 * y + 1
     return ret
 
 def DrawCircle(xc,yc,r):
